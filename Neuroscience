@@ -1,0 +1,21 @@
+import numpy as np
+
+X = np.array([[1.0, 0.5]])
+
+W1 = np.random.uniform(low=-0.5, high=0.5, size=(2, 2))
+W2 = np.random.uniform(low=-0.5, high=0.5, size=(1, 2))
+
+b1 = 0.5
+b2 = 0.7
+
+hidden_input = np.dot(X, W1.T) + b1
+hidden_output = np.tanh(hidden_input)
+
+output_input = np.dot(hidden_output, W2.T) + b2
+output = np.tanh(output_input)
+
+print("Network Output:\n", output)
+<!---
+ibrahim8666/ibrahim8666 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+You can click the Preview link to take a look at your changes.
+--->
